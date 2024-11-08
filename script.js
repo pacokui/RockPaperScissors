@@ -16,7 +16,12 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let choice = prompt("Choose: Rock, Paper, Scissors?");
-    return choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+    if (choice != "Rock" || "Paper" || "Scissors") {
+        console.log("You can only enter: Rock, Paper, Scissors");
+    }
+    else {
+        return choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+    }
 
 }
 
