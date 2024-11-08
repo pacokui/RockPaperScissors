@@ -1,4 +1,16 @@
 //console.log("Hello World!")
+function getHumanChoice(){
+    let choice;
+    do {
+        choice = prompt("Choose: Rock, Paper, Scissors?");
+        if (choice !== "Rock" && choice !== "Paper" && choice !== "Scissors") {
+        console.log("You can only enter: Rock, Paper, Scissors");
+    }
+    } while (choice !== "Rock" && choice !== "Paper" && choice !== "Scissors");
+    
+        return choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+    
+}
 
 function getComputerChoice(){
    const randomNumber = Math.random();
@@ -14,16 +26,7 @@ function getComputerChoice(){
 }
 //console.log(getComputerChoice());
 
-function getHumanChoice(){
-    let choice = prompt("Choose: Rock, Paper, Scissors?");
-    if (choice != "Rock" || "Paper" || "Scissors") {
-        console.log("You can only enter: Rock, Paper, Scissors");
-    }
-    else {
-        return choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
-    }
 
-}
 
 function playGame(){
     
